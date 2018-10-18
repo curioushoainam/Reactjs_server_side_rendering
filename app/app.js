@@ -4,3 +4,6 @@
  */
 
 document.write("I am in app.js");
+
+var greet = require('./comps/hello.js');
+greet();

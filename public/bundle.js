@@ -91,9 +91,20 @@
   !*** ./app/app.js ***!
   \********************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("/**\r\n * cmd: npm install -g webpack\r\n * cmd: webpack ./app/app.js --output ./public/bundle.js --mode development\r\n */\r\n\r\ndocument.write(\"I am in app.js\");\r\n\r\nvar greet = __webpack_require__(/*! ./comps/hello.js */ \"./app/comps/hello.js\");\r\ngreet();\n\n//# sourceURL=webpack:///./app/app.js?");
+
+/***/ }),
+
+/***/ "./app/comps/hello.js":
+/*!****************************!*\
+  !*** ./app/comps/hello.js ***!
+  \****************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("/**\r\n * npm install -g webpack\r\n * cmd: webpack ./source ./destination\r\n */\r\n\r\ndocument.write(\"I am in app.js\");\n\n//# sourceURL=webpack:///./app/app.js?");
+eval("function sayHello(){\r\n\tdocument.write(\"\\nI am from Comps Hello\");\r\n}\r\n\r\nmodule.exports = sayHello;\n\n//# sourceURL=webpack:///./app/comps/hello.js?");
 
 /***/ })
 
