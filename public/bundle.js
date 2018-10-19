@@ -81,19 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/app.jsx");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/app.js":
-/*!********************!*\
-  !*** ./app/app.js ***!
-  \********************/
+/***/ "./app/app.jsx":
+/*!*********************!*\
+  !*** ./app/app.jsx ***!
+  \*********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/**\r\n * cmd: npm install -g webpack\r\n * cmd: webpack ./app/app.js --output ./public/bundle.js --mode development\r\n * 2nd way: \r\n * create file webpack.config.js\r\n * and cmd : webpack\r\n * \r\n * to automatically run wewbpack \r\n * open new cmd tab/window, webpack -w\r\n */\r\n\r\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\r\n\r\nReactDOM.render(\r\n\tReact.createElement('a',{href: 'https://google.com'}, 'Hello world !'),\r\n\tdocument.getElementById('root')\r\n)\n\n//# sourceURL=webpack:///./app/app.js?");
+"use strict";
+eval("\n\n/**\r\n * cmd: npm install -g webpack\r\n * cmd: webpack ./app/app.js --output ./public/bundle.js --mode development\r\n * 2nd way: \r\n * create file webpack.config.js\r\n * and cmd : webpack\r\n * \r\n * to automatically run wewbpack \r\n * open new cmd tab/window, webpack -w\r\n */\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nReactDOM.render(React.createElement(\n  'a',\n  { href: 'google.com' },\n  'Hello world !'\n), document.getElementById('root'));\n\n//# sourceURL=webpack:///./app/app.jsx?");
 
 /***/ }),
 
