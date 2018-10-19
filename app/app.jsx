@@ -26,16 +26,23 @@ class List extends React.Component{
 			arr: ["Nodejs","React","HTML","JS"]
 		}
 		this.del = this.del.bind(this);
+		this.addNote = this.addNote.bind(this);
 	}
 	
 	del(index){
 		this.state.arr.splice(index,1);
 		this.setState(this.state);
 	}
+	
+	addNote(txt){
+		this.state.arr.push(txt);
+		this.setState(this.state);
+	}
 
 	render(){
-		return(
+		return(			
 			<div>
+				<NoteForm plus={this.addNote} />
 			{
 				this.state.arr.map((item, ind)=>{
 					return <Note key={ind} ind={ind} rmv={this.del} >{item}</Note>
@@ -44,6 +51,26 @@ class List extends React.Component{
 			}
 			</div>
 		)
+	}
+}
+
+class NoteForm extends React.Component{
+	constructor(props){
+		super(props);
+		this.add = this.add.bind(this);
+	}
+	add(){
+		var txt = this.refs.txt.value;
+		this.refs.txt.value= '';
+		this.props.plus(txt);
+	}
+	render(){
+		return(
+			<div>
+				<input type="text" ref="txt" placeholder="Enter your note!" />
+				<button onClick={this.add} >Add</button>
+			</div>
+		);
 	}
 }
 
